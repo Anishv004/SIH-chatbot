@@ -1,0 +1,36 @@
+MDScreen:
+    name: "main"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1,1     
+        Image:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'               
+        MDFloatLayout:
+            size_hint: .45, .08
+            pos_hint: {"center_x": .5, "center_y": .17}
+            canvas:
+                Color:
+                    rgb: (1, 170/255, 23/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22, 22, 22, 22]
+        Button:
+            text: ""
+            size_hint: .45, .18
+            pos_hint: {"center_x": .5, "center_y": .1}
+            background_color: 0,0,0,0
+            on_release:
+                app.bot_name()
+        MDLabel:
+            text: "LET'S CHAT"
+            halign: "center"
+            pos_hint: {"center_y": .17}
+            
+            font_size: "18sp"
+            color: 1, 1, 1, 1
+
+
+
+
